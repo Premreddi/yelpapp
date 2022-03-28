@@ -1,4 +1,4 @@
-package com.yelp.response;
+package com.yelp.model;
 
 public class Review {
     private String rating;

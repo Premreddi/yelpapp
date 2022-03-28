@@ -1,4 +1,4 @@
-package com.yelp.response;
+package com.yelp.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

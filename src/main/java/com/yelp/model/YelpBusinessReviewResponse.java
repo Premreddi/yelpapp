@@ -1,4 +1,4 @@
-package com.yelp.response;
+package com.yelp.model;
 
 import java.util.ArrayList;
 import java.util.List;
