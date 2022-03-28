@@ -2,7 +2,7 @@ package com.yelp.controller;
 
 import com.google.gson.Gson;
 import com.yelp.config.MyErrorHandler;
-import com.yelp.response.*;
+import com.yelp.model.*;
 import org.springframework.http.*;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
@@ -17,6 +17,8 @@ import java.util.List;
 @Transactional(rollbackFor = Exception.class)
 public class YelpController {
 
+    public static final String DATE_FORMAT = "MM-dd-yyyy";
+    public static final String DATE_TIME_FORMAT = "yyyy-MM-dd HH:mm:SS";
     String yelpUrl = "https://api.yelp.com/v3/businesses/";
     String bearerToken = "9ejLORKsQnr8xFJrWV8rQmRx0HQV_G443_wXMtTxy9NAYsBsgvxe6zMUwIQFfOdhNafiYX23Nyelv3PhRaNWnht2ETt8rzlCXoEHL9s38J8MoLMfJ2YcTAaHqAxuYXYx";
 
@@ -60,11 +62,11 @@ public class YelpController {
     }
 
     public SimpleDateFormat getDateFormater(){
-        return new SimpleDateFormat("MM-dd-yyyy");
+        return new SimpleDateFormat(DATE_FORMAT);
     }
 
     public SimpleDateFormat getDateTimeFormater(){
-        return new SimpleDateFormat("yyyy-MM-dd HH:mm:SS");
+        return new SimpleDateFormat(DATE_TIME_FORMAT);
     }
 
 }
