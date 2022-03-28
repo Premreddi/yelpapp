@@ -46,7 +46,7 @@ public class YelpController {
         }
 
         List<YelpBusinessReviewItem> reviewItems = new ArrayList<>();
-        for (BusinessReviewResponse.Review review: result.getBody().getReviews()) {
+        for (Review review: result.getBody().getReviews()) {
             YelpBusinessReviewItem yelpBusinessReviewItem = new YelpBusinessReviewItem();
             yelpBusinessReviewItem.setImageUrl(review.getUser().getImage_url());
             yelpBusinessReviewItem.setDate(getDateFormater().format(getDateTimeFormater().parse(review.getTime_created())));
